@@ -30,10 +30,13 @@ export function PriceCard({
         className,
       )}
     >
-      <span aria-hidden className="text-2xl">
+      <span
+        aria-hidden
+        className="flex h-11 w-11 items-center justify-center rounded-full bg-secondary text-accent"
+      >
         {icon}
       </span>
-      <h3 className="mt-2 font-serif text-2xl sm:text-3xl">{title}</h3>
+      <h3 className="mt-4 font-serif text-2xl sm:text-3xl">{title}</h3>
 
       {columns && (
         <div className="mt-5 flex items-baseline justify-between text-xs tracking-wide text-muted-foreground uppercase">
