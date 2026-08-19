@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Cake, Sparkles, Cherry, Heart, Leaf } from "lucide-react";
 import { ButtonLink } from "@/components/site/Button";
 import { CtaSection } from "@/components/site/CtaSection";
 import { PriceCard } from "@/components/site/PriceCard";
@@ -78,9 +79,9 @@ function Pricing() {
 
       <Section>
         <div className="columns-1 gap-5 lg:columns-2 [&>*]:mb-5">
-          <PriceCard icon="🎂" title="Торти" rows={torti} />
+          <PriceCard icon={<Cake size={22} />} title="Торти" rows={torti} />
           <PriceCard
-            icon="✨"
+            icon={<Sparkles size={22} />}
             title="Свадбена торта"
             highlight
             note="За свадбени торти, конечниот дизајн и декорација може да влијаат на цената."
@@ -92,15 +93,15 @@ function Pricing() {
               <span className="font-serif text-2xl font-semibold text-accent">20.000 ден.</span>
             </div>
           </PriceCard>
-          <PriceCard icon="🍓" title="Орео, Киндер, Кранчи" rows={specijalni} />
+          <PriceCard icon={<Cherry size={22} />} title="Орео, Киндер, Кранчи" rows={specijalni} />
           <PriceCard
-            icon="♡"
+            icon={<Heart size={22} />}
             title="Дневни слободни торти"
             rows={dnevni}
             columns={["Вид", "Мала", "Голема"]}
             note="Цените се однесуваат на мала и голема торта."
           />
-          <PriceCard icon="🍓" title="Посни торти" rows={posni} />
+          <PriceCard icon={<Leaf size={22} />} title="Посни торти" rows={posni} />
         </div>
       </Section>
 
