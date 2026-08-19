@@ -10,33 +10,73 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CenovnikRouteImport } from './routes/cenovnik'
+import { Route as GalerijaRouteImport } from './routes/galerija'
+import { Route as KontaktRouteImport } from './routes/kontakt'
+import { Route as ZaNasRouteImport } from './routes/za-nas'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CenovnikRoute = CenovnikRouteImport.update({
+  id: '/cenovnik',
+  path: '/cenovnik',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalerijaRoute = GalerijaRouteImport.update({
+  id: '/galerija',
+  path: '/galerija',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KontaktRoute = KontaktRouteImport.update({
+  id: '/kontakt',
+  path: '/kontakt',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ZaNasRoute = ZaNasRouteImport.update({
+  id: '/za-nas',
+  path: '/za-nas',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/cenovnik': typeof CenovnikRoute
+  '/galerija': typeof GalerijaRoute
+  '/kontakt': typeof KontaktRoute
+  '/za-nas': typeof ZaNasRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/cenovnik': typeof CenovnikRoute
+  '/galerija': typeof GalerijaRoute
+  '/kontakt': typeof KontaktRoute
+  '/za-nas': typeof ZaNasRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/cenovnik': typeof CenovnikRoute
+  '/galerija': typeof GalerijaRoute
+  '/kontakt': typeof KontaktRoute
+  '/za-nas': typeof ZaNasRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/cenovnik' | '/galerija' | '/kontakt' | '/za-nas'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/cenovnik' | '/galerija' | '/kontakt' | '/za-nas'
+  id: '__root__' | '/' | '/cenovnik' | '/galerija' | '/kontakt' | '/za-nas'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CenovnikRoute: typeof CenovnikRoute
+  GalerijaRoute: typeof GalerijaRoute
+  KontaktRoute: typeof KontaktRoute
+  ZaNasRoute: typeof ZaNasRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +88,43 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/cenovnik': {
+      id: '/cenovnik'
+      path: '/cenovnik'
+      fullPath: '/cenovnik'
+      preLoaderRoute: typeof CenovnikRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/galerija': {
+      id: '/galerija'
+      path: '/galerija'
+      fullPath: '/galerija'
+      preLoaderRoute: typeof GalerijaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kontakt': {
+      id: '/kontakt'
+      path: '/kontakt'
+      fullPath: '/kontakt'
+      preLoaderRoute: typeof KontaktRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/za-nas': {
+      id: '/za-nas'
+      path: '/za-nas'
+      fullPath: '/za-nas'
+      preLoaderRoute: typeof ZaNasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CenovnikRoute: CenovnikRoute,
+  GalerijaRoute: GalerijaRoute,
+  KontaktRoute: KontaktRoute,
+  ZaNasRoute: ZaNasRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
