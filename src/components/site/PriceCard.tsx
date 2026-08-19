@@ -13,7 +13,7 @@ export function PriceCard({
   children,
   className,
 }: {
-  icon: string;
+  icon: ReactNode;
   title: string;
   rows?: PriceRow[];
   note?: string;
