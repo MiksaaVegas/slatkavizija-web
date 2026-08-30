@@ -67,8 +67,8 @@ function About() {
 
       <SoftBand tone="cream">
         <div className="text-center">
-          <Eyebrow>Со мера и со срце</Eyebrow>
-          <Heading>Секој детаљ е важен</Heading>
+          <Eyebrow>Со мерак и со срце</Eyebrow>
+          <Heading>Секој детал е важен</Heading>
         </div>
         <div className="mt-10 grid gap-5 sm:grid-cols-3">
           {[
@@ -98,10 +98,10 @@ function About() {
           <Photo src={baker} alt="Марија Стојановска украсува торта" className="aspect-[4/5] max-w-[520px]" />
           <div>
             <Eyebrow>Запознајте ја Марија</Eyebrow>
-            <Heading>Марија Стојановска — основач и слаткар</Heading>
+            <Heading>Марија Стојановска, основач и слаткар</Heading>
             <blockquote className="mt-6 border-l-2 border-primary pl-5 font-serif text-2xl leading-snug">
               „Отсекогаш сум верувала дека најубавите моменти се оние што ги споделуваме со
-              луѓето што ги сакаме. А ако можеме да ги направиме малку послатки — уште
+              луѓето што ги сакаме. А ако можеме да ги направиме малку послатки, тогаш уште
               подобро.“
             </blockquote>
             <Lead>
