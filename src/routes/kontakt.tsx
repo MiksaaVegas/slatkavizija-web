@@ -115,14 +115,6 @@ function Contact() {
               При разговорот ќе договориме сè што е потребно — од големината и вкусот до
               изгледот и датумот на преземање.
             </Lead>
-            <div className="mt-8 overflow-hidden rounded-[2rem] shadow-soft">
-              <iframe
-                title="Локација на Слатка Приказна"
-                src="https://www.google.com/maps?q=%D1%83%D0%BB.%20%D0%9C%D0%B0%D0%BA%D0%B5%D0%B4%D0%BE%D0%BD%D0%B8%D1%98%D0%B0%2025%2C%20%D0%A1%D0%BA%D0%BE%D0%BF%D1%98%D0%B5&output=embed"
-                loading="lazy"
-                className="h-[280px] w-full border-0"
-              />
-            </div>
           </div>
         </div>
       </SoftBand>
