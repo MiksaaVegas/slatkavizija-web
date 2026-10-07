@@ -3,7 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    cpus: 0.5
+    cpus: 0.35
     mem_limit: 512m
     volumes:
       - .stack-data/uploads:/app/uploads
@@ -16,7 +16,7 @@ services:
 
   api:
     image: your-api:latest
-    cpus: 0.25
+    cpus: 0.15
     mem_limit: 256m
     depends_on:
       - frontend
