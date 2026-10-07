@@ -8,15 +8,8 @@ services:
     volumes:
       - .stack-data/uploads:/app/uploads
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:3000/health"]
+      test: ["CMD", "curl", "-f", "http://localhost:3000/"]
       interval: 30s
       timeout: 5s
       retries: 3
       start_period: 20s
-
-  api:
-    image: your-api:latest
-    cpus: 0.15
-    mem_limit: 256m
-    depends_on:
-      - frontend
