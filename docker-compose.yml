@@ -1,0 +1,22 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    cpus: 0.5
+    mem_limit: 512m
+    volumes:
+      - .stack-data/uploads:/app/uploads
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+
+  api:
+    image: your-api:latest
+    cpus: 0.25
+    mem_limit: 256m
+    depends_on:
+      - frontend
