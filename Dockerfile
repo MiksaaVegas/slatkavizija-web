@@ -3,14 +3,11 @@ WORKDIR /app
 COPY package.json bun.lock bunfig.toml ./
 RUN bun install --frozen-lockfile
 COPY . .
-RUN bun run build
+ENV SITE_DIR=/site
+RUN bun run build && bun scripts/prerender.mjs
 
-FROM node:22-bookworm-slim
-WORKDIR /app
-RUN apt-get update \
-  && apt-get install -y --no-install-recommends curl \
-  && rm -rf /var/lib/apt/lists/*
-COPY --from=build /app/.output ./.output
-ENV NODE_ENV=production
+FROM nginx:1.27-alpine
+RUN apk add --no-cache curl
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=build /site /usr/share/nginx/html
 EXPOSE 3000
-CMD ["sh", "-c", "export HOST=0.0.0.0 NITRO_HOST=0.0.0.0 PORT=3000 NITRO_PORT=3000; exec node .output/server/index.mjs"]
