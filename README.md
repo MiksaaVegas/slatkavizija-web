@@ -4,11 +4,11 @@ Build a very simple, polished, mobile-first website for a local Macedonian cake 
 
 The PRD contains three main parts:
 
-Navigation — the complete page structure, navigation behavior, CTA behavior, and footer.
+Navigation - the complete page structure, navigation behavior, CTA behavior, and footer.
 
-Copy — the Macedonian-language content and section structure for every page.
+Copy - the Macedonian-language content and section structure for every page.
 
-Design System — the visual direction, typography, colors, layouts, responsive behavior, and interaction guidelines.
+Design System - the visual direction, typography, colors, layouts, responsive behavior, and interaction guidelines.
 
 Overall goal
 
@@ -230,7 +230,7 @@ Continue developing this project in the [Lovable editor](https://lovable.dev/pro
 
 ## Development
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+Prefer working locally? You need Node.js and npm - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
 
 ```sh
 git clone <this-repository-url>

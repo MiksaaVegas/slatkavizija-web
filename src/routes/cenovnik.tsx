@@ -8,13 +8,13 @@ import { Eyebrow, Heading, Lead, Section, SoftBand } from "@/components/site/Sec
 export const Route = createFileRoute("/cenovnik")({
   head: () => ({
     meta: [
-      { title: "Ценовник — Слатка Приказна" },
+      { title: "Ценовник - Слатка Приказна" },
       {
         name: "description",
         content:
           "Цени на торти, свадбени торти, посни торти и дневни слатки во Слатка Приказна, Скопје.",
       },
-      { property: "og:title", content: "Ценовник — Слатка Приказна" },
+      { property: "og:title", content: "Ценовник - Слатка Приказна" },
       { property: "og:description", content: "Погледнете ја нашата понуда и цени." },
     ],
   }),
@@ -125,7 +125,7 @@ function Pricing() {
       <CtaSection
         eyebrow="Тука сме за вас"
         title="Не сте сигурни која торта да ја изберете?"
-        text="Кажете ни за која прилика ви треба торта, за колку луѓе и што би сакале — ќе ви помогнеме да го направите вистинскиот избор."
+        text="Кажете ни за која прилика ви треба торта, за колку луѓе и што би сакале - ќе ви помогнеме да го направите вистинскиот избор."
       />
     </>
   );
